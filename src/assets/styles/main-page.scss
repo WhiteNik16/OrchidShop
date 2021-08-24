@@ -1,22 +1,45 @@
 .v-main-page {
-  flex: 1 1 auto;
+  flex:1 1 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  &__catalog{
 
+  }
 }
 .v-main-page__title{
-  background-color: #4CAF50;
-  display: flex;
-  justify-content: center;
-  border: 2px solid #eae2e6;
-  max-width: 60%;
-  max-height: 80px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: #F7E2C7;
+  text-align: center;
 
 }
 .v-main-page__title-text{
 
-  color: black;
-  margin: 20px;
+  color: #3b0220;
+  line-height: 1.2;
+  margin: 15px 0;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, .08),
+  2px 2px 1px rgba(0, 0, 0, .075),
+  4px 4px 1px rgba(0, 0, 0, .07),
+  6px 6px 1px rgba(0, 0, 0, .065),
+  8px 8px 1px rgba(0, 0, 0, .06),
+  10px 10px 1px rgba(0, 0, 0, .055),
+  12px 12px 1px rgba(0, 0, 0, .05),
+  14px 14px 1px rgba(0, 0, 0, .045),
+  16px 16px 1px rgba(0, 0, 0, .04),
+  18px 18px 1px rgba(0, 0, 0, .035),
+  20px 20px 1px rgba(0, 0, 0, .03),
+  22px 22px 1px rgba(0, 0, 0, .025),
+  24px 24px 1px rgba(0, 0, 0, .02),
+  26px 26px 1px rgba(0, 0, 0, .015),
+  28px 28px 1px rgba(0, 0, 0, .01),
+  30px 30px 1px rgba(0, 0, 0, .005),
+  32px 32px 1px rgba(0, 0, 0, .0025),
+  34px 34px 1px rgba(0, 0, 0, .002),
+  36px 36px 1px rgba(0, 0, 0, .0015),
+  38px 38px 1px rgba(0, 0, 0, .001);
 
 }

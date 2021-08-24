@@ -20,9 +20,9 @@
 
  <div>
    <p>Фото:<input type="file" id="file" ref="file" v-on:change="handleFileUploud()" /></p>
-
+   <button class="btn_submit " @click="submitFile()">Добавить</button>
  </div>
-  <button class="btn_submit" @click="submitFile()">Добавить</button>
+
 </div>
 </template>
 

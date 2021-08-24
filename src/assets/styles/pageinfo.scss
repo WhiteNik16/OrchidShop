@@ -1,6 +1,7 @@
 .v-page-info-main{
   height: 610px;
   background: #9fa9ff;
+  text-indent: 30px;
 }
 .v-page-info{
   display: table ;
@@ -21,7 +22,12 @@
 height: 550px;
     margin-left: 10px;
   }
-
+  &__text_2{
+  margin-left: 250px;
+    text-align: start;
+    width: 70%;
+    font-size: 20px;
+  }
 
 
 }
