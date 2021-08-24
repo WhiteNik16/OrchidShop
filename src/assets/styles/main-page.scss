@@ -1,0 +1,22 @@
+.v-main-page {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+
+}
+.v-main-page__title{
+  background-color: #4CAF50;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #eae2e6;
+  max-width: 60%;
+  max-height: 80px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.v-main-page__title-text{
+
+  color: black;
+  margin: 20px;
+
+}

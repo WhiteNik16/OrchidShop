@@ -1,0 +1,27 @@
+.v-page-info-main{
+  height: 610px;
+  background: #9fa9ff;
+}
+.v-page-info{
+  display: table ;
+
+
+  &__block{
+    display: table-cell;
+    vertical-align:top;
+     text-align: justify;
+
+  }
+  &__text{
+    text-align: start;
+    width: 70%;
+  }
+  &__img{
+    margin-top: 10px;
+height: 550px;
+    margin-left: 10px;
+  }
+
+
+
+}

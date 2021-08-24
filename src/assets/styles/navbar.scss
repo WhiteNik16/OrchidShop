@@ -1,0 +1,42 @@
+
+.v-nav-bar{
+  display: flex;
+  background-color: #d5d1d9;
+  flex-wrap: nowrap;
+  align-content: center;
+
+
+
+
+}
+
+.btn_link{
+
+
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  float: left;
+  border-radius: 2px;
+  transition-duration: 0.06s;
+
+}
+.btn_link:hover{
+
+  background-color: #4CAF50;
+}
+.btn_link:active{
+  background-color: #0a0a0e;
+
+
+}
+.link_to_cart_admin{
+  margin-left: 837%;
+}
+.link_to_cart_directory{
+
+
+}
