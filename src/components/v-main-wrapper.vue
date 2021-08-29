@@ -27,7 +27,7 @@ components:{
 
 <style lang="scss">
 .v-main-wrapper{
-  min-height: 100%;
+  min-height: 721px;
   display: flex;
   flex-direction: column;
 }

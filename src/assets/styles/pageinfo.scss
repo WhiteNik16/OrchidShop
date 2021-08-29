@@ -1,32 +1,50 @@
 .v-page-info-main{
-  height: 610px;
-  background: #9fa9ff;
+  min-height: 610px;
+  background: url("../images/back-direct.jpg");
   text-indent: 30px;
 }
 .v-page-info{
   display: table ;
+  margin-right: 20px;
+  margin-bottom: 10px;
 
 
   &__block{
     display: table-cell;
     vertical-align:top;
-     text-align: justify;
+     text-align: center;
+
+
 
   }
   &__text{
+    padding: 5px;
+    background-color: bisque;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 6001;
     text-align: start;
-    width: 70%;
+
+
+
+
   }
   &__img{
     margin-top: 10px;
 height: 550px;
-    margin-left: 10px;
+
+    border-radius: 10px ;
+
   }
   &__text_2{
   margin-left: 250px;
     text-align: start;
     width: 70%;
     font-size: 20px;
+    padding: 5px;
+    background-color: bisque;
+    border-radius: 40px;
+
   }
 
 

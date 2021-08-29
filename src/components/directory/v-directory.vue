@@ -3,11 +3,11 @@
   <h2 class="v-directory__title">Справочник информации</h2>
  <div class="v-directory-list">
 
-  <router-link :to="{name:'page1'}"> <p class="v-directory-list">Что такое орхидея?</p> </router-link>
-   <router-link :to="{name:'page2'}"> <p class="v-directory-list" >Как создать коллекцию орхидей?</p> </router-link>
-   <router-link :to="{name:'page3'}"> <p class="v-directory-list" >3</p> </router-link>
-   <router-link :to="{name:'page4'}"> <p class="v-directory-list" >4</p> </router-link>
-   <router-link :to="{name:'page5'}"> <p class="v-directory-list" > 5</p> </router-link>
+  <router-link :to="{name:'page1'}"> <li class="v-directory-list__element">Что такое орхидея?</li> </router-link>
+   <router-link :to="{name:'page2'}"> <li class="v-directory-list__element" >Как создать коллекцию орхидей?</li> </router-link>
+   <router-link :to="{name:'page3'}"> <li class="v-directory-list__element" >3</li> </router-link>
+   <router-link :to="{name:'page4'}"> <li class="v-directory-list__element" >4</li> </router-link>
+   <router-link :to="{name:'page5'}"> <li class="v-directory-list__element" > 5</li> </router-link>
 
 
   </div>
