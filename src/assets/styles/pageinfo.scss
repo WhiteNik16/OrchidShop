@@ -49,3 +49,84 @@ height: 550px;
 
 
 }
+.v-page-info-3 {
+  background-image: url("../images/back-direct.jpg");
+
+
+  margin-right: auto;
+  margin-left: auto;
+
+  &__head, &__content, &__content_advanteg, &__footer, {
+    font-size: 20px;
+    font-weight: 500;
+    background-color: bisque;
+    margin-right: auto;
+    margin-left: auto;
+    text-indent: 20px;
+
+
+    width: 50%;
+    padding: 10px;
+  }
+
+  &__head {
+    display: table;
+    vertical-align: top;
+    text-align: start;
+    margin-top: 10px;
+    border-radius: 20px 20px 0 0 ;
+
+    img {
+      height: 200px;
+      float: right;
+      margin: 0 0 5px 5px;
+    }
+  }
+
+  &__content {
+    display: table;
+    vertical-align: top;
+    text-align: start;
+
+  }
+
+  &__content_advanteg {
+    width: 100%;
+    text-indent: 10px;
+    display: table;
+    vertical-align: top;
+    text-align: start;
+
+    img {
+      width: 180px;
+      height: auto;
+      float: right;
+    }
+    h3{
+      text-align: center;
+    }
+  }
+
+  &__content_advanteg li {
+    margin-top: 5px;
+
+  }
+  &__footer{
+
+    text-indent: 10px;
+    display: table;
+    vertical-align: top;
+    text-align: start;
+    margin-bottom: 5px;
+    border-radius: 0 0 20px 20px ;
+    img{
+      width: 180px;
+      height: auto;
+      float: right;
+    }
+    h2{
+      margin-top: -20px;
+      text-align: center;
+    }
+  }
+}

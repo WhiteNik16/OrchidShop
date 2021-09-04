@@ -10,6 +10,7 @@ import vPage2 from '../components/directory/childdir/v-page2'
 import vPage3 from '../components/directory/childdir/v-page3'
 import vPage4 from '../components/directory/childdir/v-page4'
 import vPage5 from '../components/directory/childdir/v-page5'
+import vCart from '../components/cart/v-cart'
 
 Vue.use(Router);
 
@@ -62,6 +63,12 @@ let router = new Router ({
             name: 'page5',
             component: vPage5
         },
+        {
+            path: '/v-cart',
+            name: 'cart',
+            component: vCart
+
+        }
 
 
 

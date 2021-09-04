@@ -5,7 +5,7 @@
 
   <router-link :to="{name:'page1'}"> <li class="v-directory-list__element">Что такое орхидея?</li> </router-link>
    <router-link :to="{name:'page2'}"> <li class="v-directory-list__element" >Как создать коллекцию орхидей?</li> </router-link>
-   <router-link :to="{name:'page3'}"> <li class="v-directory-list__element" >3</li> </router-link>
+   <router-link :to="{name:'page3'}"> <li class="v-directory-list__element" >Горячий душ для орхидей - польза или вред?</li> </router-link>
    <router-link :to="{name:'page4'}"> <li class="v-directory-list__element" >4</li> </router-link>
    <router-link :to="{name:'page5'}"> <li class="v-directory-list__element" > 5</li> </router-link>
 

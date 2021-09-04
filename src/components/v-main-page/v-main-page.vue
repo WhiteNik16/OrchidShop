@@ -4,24 +4,45 @@
   <div class="v-main-page__title">
     <h1 class="v-main-page__title-text"><span>{{title}}</span></h1>
   </div>
+
   <div class="v-main-page__catalog">
-  <v-catalo-item/>
+    <div> <img class="v-main-page__img" src="../../assets/images/new.png"> </div>
+
+  <v-catalog-item class="v-catalog-item__mp"
+      v-for="product in Products.slice(Products.length-4)"
+      :key="product.article"
+      v-bind:product_data="product"/>
+
+  </div>
+  <div>
+
   </div>
 </div>
 </template>
 
 <script>
-import vCataloItem from '../catalog/v-catalog-item'
+import vCatalogItem from '../catalog/v-catalog-item'
+import {mapGetters} from "vuex";
 export default {
   components:{
-    vCataloItem
+    vCatalogItem
   },
   data(){
     return{
-      title: 'Прекрасные орхидеи'
+      title: 'Прекрасные орхидеи',
+      items: {},
     }
 
-  }
+  },
+  computed:{
+    ...mapGetters([
+      'Products'
+    ]),
+
+
+
+  },
+
 }
 </script>
 
