@@ -11,6 +11,8 @@ import vPage3 from '../components/directory/childdir/v-page3'
 import vPage4 from '../components/directory/childdir/v-page4'
 import vPage5 from '../components/directory/childdir/v-page5'
 import vCart from '../components/cart/v-cart'
+import vRegister from '../components/auth/v-auth-register'
+import vLogin from '../components/auth/v-auth_login'
 
 Vue.use(Router);
 
@@ -67,6 +69,18 @@ let router = new Router ({
             path: '/v-cart',
             name: 'cart',
             component: vCart
+
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: vRegister
+
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: vLogin
 
         }
 

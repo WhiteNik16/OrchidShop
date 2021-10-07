@@ -2,6 +2,7 @@
 <div class="admin-page">
 <div class="admin-page__add_item">
   <h2>Добавить товар</h2>
+  <form id="uploadForm" name="uploadForm" enctype="multipart/form-data">
   <div class="admin-page__name">
     <p>Название:</p>
      <p><input type="text" v-model="newproduct.name"></p>
@@ -24,10 +25,13 @@
   </div>
     <div class="admin-page__image">
       <p>Фото:</p>
-    <p><input type="text" v-model="newproduct.image" ></p>
-      <button class="btn_submit " @click="submitForm(newproduct)">Добавить</button>
+    <p><input type="file" name="file" ref="files" v-on:change="handleUploadFile()" multiple></p>
+      <button class="btn_submit " type="button" @click="submitForm()">Добавить</button>
     </div>
+  </form>
 </div>
+
+
   <div class="admin-page__remove_item">
     <h2>Удалить товар</h2>
     <p>Введите артикль:</p>
@@ -39,6 +43,8 @@
 
 <script>
 import {mapActions,mapGetters} from 'vuex'
+import axios from 'axios'
+import swal from 'sweetalert2'
 
 export default {
   data(){
@@ -52,6 +58,7 @@ export default {
         description: '',
 
       },
+      file:{},
       deleteArticle:''
     }
   },
@@ -67,20 +74,50 @@ export default {
         'SUBMIT_FORM',
         'DELETE_ITEM_FROM_CATALOG'
     ]),
-   submitForm(newproduct){
-
-     return this.SUBMIT_FORM(newproduct)
-
-
-    // return this.SUBMIT_FORM(product).then(() => {
-    //   this.product.name = ''
-    //   this.product.price = ''
-    //   this.product.image = ''
-    //   this.product.article = ''
-    //   this.product.description = ''
-    //   this.product.quantityFlo = ''
-    // })
+   handleUploadFile(){
+     this.file = this.$refs.files.files[0];
    },
+   submitForm(){
+     let formData = new FormData();
+     formData.append('file', this.file);
+     formData.append('name', this.newproduct.name)
+     formData.append('price', this.newproduct.price)
+     formData.append('article', this.newproduct.article)
+
+
+     console.log(formData)
+
+     axios.post('http://localhost:3000/upload',formData)
+         .then(response => {
+           if(response.data == "Файл загружен"){
+           swal.fire({
+
+             position: 'top',
+             icon: 'success',
+             title: 'Файл успешно добавлен',
+             showConfirmButton: 'false',
+             timer: 1500,
+           })
+           }
+           else {
+             swal.fire({
+
+               position: 'top',
+               icon: 'error',
+               title: 'error',
+               showConfirmButton: 'false',
+               timer: 1500,
+           })
+           }
+         })
+
+         .catch(error => {
+           console.log(error.response)
+         })
+   },
+
+
+
    deleteItemFromCatalog(newproduct){
     this.DELETE_ITEM_FROM_CATALOG(newproduct)
 
