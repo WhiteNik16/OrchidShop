@@ -1,0 +1,91 @@
+.v-auth-register{
+  background: url("../../assets/images/back_register.jpg");
+  flex:1 1 auto;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    flex: 0
+  }
+  h2 {
+    flex: 0
+  }
+  &__res_true{
+    background: #61ff87;
+    width: 30%;
+    margin: 0 auto;
+
+  }
+  &__res_false{
+    background: #ff4c63;
+    width: 30%;
+    margin: 0 auto;
+
+  }
+  &__form{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 20px;
+
+  }
+
+}
+.v-auth-register__registration_form{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &_radio{
+    margin: 10px 0;
+  }
+  &_pass{
+    padding: 10px 0;
+  }
+  button{
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #3f3cef;
+    color: #eeeded;
+    height: 40px;
+    box-shadow: 2px 2px 2px #07d9f6;
+    border-radius: 7%;
+  }
+}
+.v-auth-login{
+  background: url("../../assets/images/back_register.jpg");
+  flex:1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    font-size: 20px;
+    padding: 10px;
+
+
+    margin-top: 5% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: auto;
+    input{
+      height: 25px;
+      width: auto;
+    }
+    button{
+      font-weight: 500;
+      font-size: 14px;
+      background-color: #5653f6;
+      color: #eeeded;
+      height: 40px;
+      width: 75px;
+      border-radius: 40%;
+    }
+  }
+
+}

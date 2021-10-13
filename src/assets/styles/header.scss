@@ -1,0 +1,23 @@
+.v-header{
+  flex: 0 0 auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+
+  background-color: #91058f;
+}
+.logo-img{
+  height:90px ;
+  margin-left: 3px;
+}
+.v-header-button-reg {
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: #0d00f6;
+  height: 45px;
+}

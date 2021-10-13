@@ -1,0 +1,47 @@
+.v-directory{
+  flex:1 1 auto;
+  background:url("../images/back-direct.jpg");
+&__title{
+  display: table;
+  text-align: start;
+  align-content: start;
+  align-items: start;
+  width: auto;
+  margin: 4px auto;
+  padding: 15px;
+  letter-spacing: 2px;
+  background: lemonchiffon;
+  border: 2px dashed white;
+  color: midnightblue;
+  box-shadow: 2px 2px midnightblue;
+  text-shadow: 0 1px midnightblue;
+
+}
+  &__element{
+    background-image: url("../images/list-png.png");
+
+
+  }
+
+}
+
+.v-directory-list{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  max-width: 50%;
+  border-radius: 30px;
+  padding: 20px 0px 10px 10px;
+  background: #e5ffc1;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+
+
+
+
+}

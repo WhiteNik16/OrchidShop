@@ -1,0 +1,72 @@
+
+//.v-main-page__img{
+//  padding-right: 300px;
+//  height: 58px;
+//  display: flex;
+//  margin-bottom: -25px;
+//}
+.v-main-page {
+background: url("../../assets/images/back-direct.jpg");
+
+  &__catalog{
+
+    background: #b25ad8;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    border-radius: 20px;
+    width: 40%;
+
+
+
+
+
+  }
+}
+
+.v-main-page__title{
+  background: #F7E2C7;
+  text-align: center;
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 3px;
+
+}
+.v-main-page__title-text{
+
+  color: #3b0220;
+  line-height: 1.2;
+  margin:4px 0;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, .08),
+  2px 2px 1px rgba(0, 0, 0, .075),
+  4px 4px 1px rgba(0, 0, 0, .07),
+  6px 6px 1px rgba(0, 0, 0, .065),
+  8px 8px 1px rgba(0, 0, 0, .06),
+  10px 10px 1px rgba(0, 0, 0, .055),
+  12px 12px 1px rgba(0, 0, 0, .05),
+  14px 14px 1px rgba(0, 0, 0, .045),
+  16px 16px 1px rgba(0, 0, 0, .04),
+  18px 18px 1px rgba(0, 0, 0, .035),
+  20px 20px 1px rgba(0, 0, 0, .03),
+  22px 22px 1px rgba(0, 0, 0, .025),
+  24px 24px 1px rgba(0, 0, 0, .02),
+  26px 26px 1px rgba(0, 0, 0, .015),
+  28px 28px 1px rgba(0, 0, 0, .01),
+  30px 30px 1px rgba(0, 0, 0, .005),
+  32px 32px 1px rgba(0, 0, 0, .0025),
+  34px 34px 1px rgba(0, 0, 0, .002),
+  36px 36px 1px rgba(0, 0, 0, .0015),
+  38px 38px 1px rgba(0, 0, 0, .001);
+
+}
+
+
+
