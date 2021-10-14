@@ -11,7 +11,5 @@ export default {
     DELETE_ITEM_FROM_CATALOG({commit,newproduct}){
         commit('DELETE_FROM_CATALOG_ITEM',newproduct)
 },
-    ADD_JWT({commit},jwt){
-        commit('ADD_USER_JWT',jwt)
-    }
+
 }

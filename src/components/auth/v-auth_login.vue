@@ -12,6 +12,7 @@
        <div><a href="/#/register">Нет профиля? Регистрация</a></div>
     </form>
   </div>
+  <button @click="consoleLog">console</button>
 </div >
 </template>
 
@@ -34,8 +35,12 @@ export default {
   methods:{
 
 ...mapActions([
-  'ADD_JWT'
+
 ]),
+    consoleLog(){
+  console.log(localStorage.jwt)
+
+    },
     submitLoginForm(){
       axios.post('http://localhost:3000/auth/login', this.user)
       .then(res =>{
@@ -43,10 +48,10 @@ export default {
         if(res.status==202){
           let jwt = res.data
 
-
+          localStorage.jwt=jwt;
           console.log(this.jwt)
 
-            this.ADD_JWT(jwt)
+
 
           swal.fire({
 

@@ -2,7 +2,7 @@
   <div class="cart-item">
 
 
-      <img class="cart-item__image" :src="require('../../assets/images/catalogimages/'+cart_item_data.image)" alt="img">
+      <img class="cart-item__image" :src="require('../../../../serverorchidshop/uploads/'+cart_item_data.image)" alt="img">
 
 <div class="cart-item__name">
   <p>{{cart_item_data.name}}</p>

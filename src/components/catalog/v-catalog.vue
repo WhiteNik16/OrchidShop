@@ -5,7 +5,7 @@
   <div class="v-catalog-item__item">
   <v-catalog-item
     v-for="product in Products"
-    :key="product.article"
+    :key="product._id"
     v-bind:product_data="product"
     @addToCart="addToCart"
   />
@@ -30,7 +30,8 @@ export default {
   },
   methods:{
     ...mapActions([
-        'ADD_TO_CART'
+        'ADD_TO_CART',
+        'GET_PRODUCTS_FROM_API',
     ]),
     addToCart(data) {
       this.ADD_TO_CART(data)
@@ -44,6 +45,7 @@ export default {
   },
 
   mounted() {
+    this.GET_PRODUCTS_FROM_API()
 
 
   }

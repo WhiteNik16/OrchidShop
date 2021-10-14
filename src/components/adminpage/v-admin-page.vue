@@ -5,23 +5,23 @@
   <form id="uploadForm" name="uploadForm" enctype="multipart/form-data">
   <div class="admin-page__name">
     <p>Название:</p>
-     <p><input type="text" v-model="newproduct.name"></p>
+     <p><input type="text" v-model="product.name"></p>
   </div>
   <div class="admin-page__quantity">
     <p>Кол-во цветоносов:</p>
-    <p><input type="text" v-model="newproduct.quantityFlo"></p>
+    <p><input type="text" v-model="product.quantityFlo"></p>
   </div>
   <div class="admin-page__description">
     <p>Описание:</p>
-    <p><input type="text" v-model="newproduct.description"></p>
+    <p><input type="text" v-model="product.description"></p>
   </div>
   <div class="admin-page__price">
     <p>Цена:</p>
-    <p><input type="number" v-model="newproduct.price"></p>
+    <p><input type="number" v-model="product.price"></p>
   </div>
   <div class="admin-page__price">
     <p>Артикль:</p>
-    <p><input type="number" v-model="newproduct.article"></p>
+    <p><input type="number" v-model="product.article"></p>
   </div>
     <div class="admin-page__image">
       <p>Фото:</p>
@@ -35,8 +35,8 @@
   <div class="admin-page__remove_item">
     <h2>Удалить товар</h2>
     <p>Введите артикль:</p>
-  <div><input type="text" v-model="newproduct.article"></div>
-    <div ><button class="btn_delete" @click="deleteItemFromCatalog(newproduct)">Удалить</button></div>
+  <div><input type="text" v-model="product.article"></div>
+    <div ><button class="btn_delete" @click="deleteItemFromCatalog(product)">Удалить</button></div>
   </div>
 </div>
 </template>
@@ -49,10 +49,10 @@ import swal from 'sweetalert2'
 export default {
   data(){
     return {
-       newproduct: {
+       product: {
         name: '',
         price: '',
-        image: '',
+
         article:'',
         quantityFlo: '',
         description: '',
@@ -78,16 +78,16 @@ export default {
      this.file = this.$refs.files.files[0];
    },
    submitForm(){
-     let formData = new FormData();
-     formData.append('file', this.file);
-     formData.append('name', this.newproduct.name)
-     formData.append('price', this.newproduct.price)
-     formData.append('article', this.newproduct.article)
+      let formdata = new FormData()
+       formdata.append('name',this.product.name)
+       formdata.append('price',this.product.price)
+       formdata.append('article',this.product.article)
+       formdata.append('quantityFlo',this.product.quantityFlo)
+       formdata.append('description',this.product.description)
 
-
-     console.log(formData)
-
-     axios.post('http://localhost:3000/upload',formData)
+       formdata.append('file', this.file)
+        console.log(formdata.getAll('product','file'))
+     axios.post('http://localhost:3000/api/addorchid',formdata)
          .then(response => {
            if(response.data == "Файл загружен"){
            swal.fire({

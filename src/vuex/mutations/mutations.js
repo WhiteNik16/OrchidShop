@@ -25,8 +25,9 @@ export default {
         state.products.splice(newproduct.article, 1)
             },
 
-    ADD_USER_JWT: (state, jwt) =>{
-        state.jwt=jwt
+
+    SET_PRODUCTS_TO_STATE: (state, products) => {
+        state.products = products;
     },
 
 
