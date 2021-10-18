@@ -67,6 +67,15 @@ background: url("../../assets/images/back-direct.jpg");
   38px 38px 1px rgba(0, 0, 0, .001);
 
 }
+@media (max-height: 767px) {
+  .v-main-page__title-text{
+    font-size: 20px;
+  }
+
+}
+
+
+
 
 
 

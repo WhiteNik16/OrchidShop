@@ -23,7 +23,7 @@
 
 <script>
 import vCatalogItem from '../catalog/v-catalog-item'
-import {mapGetters} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 export default {
   components:{
     vCatalogItem
@@ -35,6 +35,12 @@ export default {
     }
 
   },
+  methods:{
+    ...mapActions([
+
+      'GET_PRODUCTS_FROM_API',
+    ]),
+  },
   computed:{
     ...mapGetters([
       'Products'
@@ -43,6 +49,11 @@ export default {
 
 
   },
+  mounted() {
+    this.GET_PRODUCTS_FROM_API()
+
+
+  }
 
 }
 </script>

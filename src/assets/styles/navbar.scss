@@ -9,7 +9,6 @@
 
 
 }
-
 .btn_link{
 
 
@@ -33,6 +32,41 @@
 
 
 }
+@media(max-height: 480px) {
+  .btn_link {
+    font-size: 10px;
+
+    padding: 0.6em 1.3em;
+
+
+  }
+
+}
+@media(min-height:481px) and (max-height: 767px) {
+  .btn_link{
+
+    font-size: 12px;
+
+    padding: 0.6em 1.3em;
+
+
+
+
+
+
+  }
+}
+@media(min-height: 767px) and (max-height: 1023px) {
+  .btn_link {
+    font-size: 14px;
+
+    padding: 1em 2em;
+
+
+  }
+}
+
+
 .link_to_cart_admin{
   text-decoration: none;
   color:white;
