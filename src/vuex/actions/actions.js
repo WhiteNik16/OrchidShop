@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export default {
     SUBMIT_FORM({commit}, newproduct) {
         commit('PUSH_FORM', newproduct)
@@ -8,8 +10,21 @@ export default {
     DELETE_ITEM({commit}, index) {
         commit('DELETE_CART_ITEM', index)
     },
-    DELETE_ITEM_FROM_CATALOG({commit,newproduct}){
-        commit('DELETE_FROM_CATALOG_ITEM',newproduct)
-},
+
+    GET_USER_INFO({commit},jwt){
+        return axios('http://localhost:3000/auth/userinfo', { method: "GET",headers: {
+                Authorization: "Bearer " + jwt
+            }
+
+        })
+    .then((userinfo) =>{
+            commit('GET_USER_FROM_JWT', userinfo);
+            return userinfo;
+        })
+            .catch((error) =>{
+                console.log(error)
+                return error;
+            })
+    },
 
 }

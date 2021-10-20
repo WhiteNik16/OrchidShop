@@ -2,14 +2,10 @@
   flex: 1 1 auto;
   display: flex;
   background-image: url("../../assets/images/back-admin.jpg");
-
-
-
   justify-content: space-around;
   font-size: 20px;
 
-  max-width: 100%;
-  max-height: 100%;
+
 
 
 }
@@ -47,4 +43,71 @@
   font-style: italic;
   margin: 5px 0;
 
+}
+@media(max-height: 480px) {
+  .admin-page{
+    font-size: 13px;
+    flex-direction: column;
+
+  }
+  .btn_submit, .btn_delete{
+    width: 50px;
+    height: 20px;
+  }
+  .admin-page__remove_item{
+
+    background: none;
+    border: none;
+    p{
+      background: #5acad8;
+      border-radius: 20px;
+    }
+  }
+  .admin-page__add_item{
+
+    background: none;
+    border: none;
+    p{
+      background: #5acad8;
+      border-radius: 20px;
+
+    }
+  }
+
+}
+@media(min-height:481px) and (max-height: 767px) {
+  .admin-page{
+    font-size: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .btn_submit, .btn_delete{
+    width: 90px;
+    height: 30px;
+  }
+  .admin-page__remove_item{
+    margin: 0 auto;
+
+    background: none;
+    border: none;
+    p{
+      background: #5acad8;
+      border-radius: 20px;
+    }
+  }
+  .admin-page__add_item{
+    margin: 0 auto;
+
+    background: none;
+    border: none;
+    p{
+      background: #5acad8;
+      border-radius: 20px;
+    }
+  }
+}
+@media(min-height: 767px) and (max-height: 1023px) {
+  .admin-page{
+    font-size: 20px;
+  }
 }

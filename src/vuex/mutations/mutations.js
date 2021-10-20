@@ -29,6 +29,9 @@ export default {
     SET_PRODUCTS_TO_STATE: (state, products) => {
         state.products = products;
     },
+    GET_USER_FROM_JWT:(state,userinfo) =>{
+        state.userinfo=userinfo.data[0]
+    },
 
 
 

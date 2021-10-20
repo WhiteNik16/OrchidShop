@@ -16,13 +16,16 @@ import vLogin from '../components/auth/v-auth_login'
 
 Vue.use(Router);
 
+
+
 let router = new Router ({
     routes: [
 
         {
             path: '/v-admin',
             name: 'adminPage',
-            component: vAdminPage
+            component: vAdminPage,
+            meta: {requiresAuth: true}
         },
         {
             path: '/v-catalog',
@@ -89,6 +92,18 @@ let router = new Router ({
     ]
 
 })
-
+router.beforeEach((to, from, next) => {
+    if(to.matched.some(record => record.meta.requiresAuth))  {
+        if(localStorage.jwt.admin) {
+            next()
+        }
+        else {
+            next('/')
+        }
+    }
+    else {
+        next()
+    }
+})
 
 export default router;

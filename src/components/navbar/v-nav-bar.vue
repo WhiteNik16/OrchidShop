@@ -10,7 +10,7 @@
     <div class="link_to_cart btn_link">Корзина</div>
     </router-link>
    <router-link to="/v-directory"> <div class="link_to_cart_directory btn_link">Справочник</div></router-link>
-    <div class="link_to_cart_admin">
+    <div v-if="this.$store.state.userinfo.admin" class="link_to_cart_admin">
     <router-link :to="{name:'adminPage'}"><div class="btn_link">admin</div> </router-link>
     </div>
   </div>

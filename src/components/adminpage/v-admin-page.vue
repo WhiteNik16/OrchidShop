@@ -11,10 +11,7 @@
     <p>Кол-во цветоносов:</p>
     <p><input type="text" v-model="product.quantityFlo"></p>
   </div>
-  <div class="admin-page__description">
-    <p>Описание:</p>
-    <p><input type="text" v-model="product.description"></p>
-  </div>
+
   <div class="admin-page__price">
     <p>Цена:</p>
     <p><input type="number" v-model="product.price"></p>
@@ -23,9 +20,13 @@
     <p>Артикль:</p>
     <p><input type="number" v-model="product.article"></p>
   </div>
+    <div class="admin-page__description">
+      <p>Описание:</p>
+      <p><input type="textarea" v-model="product.description"></p>
+    </div>
     <div class="admin-page__image">
       <p>Фото:</p>
-    <p><input type="file" name="file" ref="files" v-on:change="handleUploadFile()" multiple></p>
+    <input type="file" name="file" ref="files" v-on:change="handleUploadFile()" multiple>
       <button class="btn_submit " type="button" @click="submitForm()">Добавить</button>
     </div>
   </form>

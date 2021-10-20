@@ -35,6 +35,7 @@ export default {
   methods:{
 
 ...mapActions([
+    'GET_USER_INFO'
 
 ]),
     consoleLog(){
@@ -49,6 +50,7 @@ export default {
           let jwt = res.data
 
           localStorage.jwt=jwt;
+
           console.log(this.jwt)
 
 
@@ -79,6 +81,7 @@ export default {
           this.user.password=''
     }
   },
+
 
 }
 
