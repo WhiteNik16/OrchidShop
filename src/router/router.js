@@ -13,6 +13,7 @@ import vPage5 from '../components/directory/childdir/v-page5'
 import vCart from '../components/cart/v-cart'
 import vRegister from '../components/auth/v-auth-register'
 import vLogin from '../components/auth/v-auth_login'
+import vOrder from '../components/cart/v-order'
 
 Vue.use(Router);
 
@@ -71,7 +72,14 @@ let router = new Router ({
         {
             path: '/v-cart',
             name: 'cart',
-            component: vCart
+            component: vCart,
+        },
+        {
+            path:'/order',
+            name: 'vOrder',
+            component: vOrder
+
+
 
         },
         {
@@ -94,7 +102,7 @@ let router = new Router ({
 })
 router.beforeEach((to, from, next) => {
     if(to.matched.some(record => record.meta.requiresAuth))  {
-        if(localStorage.jwt.admin) {
+        if(localStorage.admin == 'true') {
             next()
         }
         else {

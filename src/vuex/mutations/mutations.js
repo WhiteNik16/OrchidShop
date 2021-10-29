@@ -24,6 +24,10 @@ export default {
 
         state.products.splice(newproduct.article, 1)
             },
+    USER_UNLOGIN:(state) =>{
+        state.userinfo={}
+
+    },
 
 
     SET_PRODUCTS_TO_STATE: (state, products) => {

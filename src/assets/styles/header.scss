@@ -9,6 +9,20 @@
   background-color: #91058f;
 
 }
+.auth_complete_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  font-weight: 550;
+  font-size: 1.1em;
+  p{
+    margin-top: 0;
+    margin-bottom:-7% ;
+    padding-bottom:7% ;
+  }
+}
 .logo-img{
   height:19rem ;
   margin-left: 3px;
@@ -20,6 +34,10 @@
   .logo-img {
     height: 2.8em;
     margin-left: 1px;
+  }
+  .auth_complete_text{
+    font-size: 0.85em;
+    font-weight: 450;
   }
 }
   @media(min-height: 767px) and (max-height: 1023px) {

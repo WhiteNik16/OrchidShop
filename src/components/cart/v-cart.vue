@@ -12,6 +12,7 @@
 
 </div>
 <div class="v-cart__total">
+  <router-link to="/order"><button> order</button></router-link>
   <p>Сумма:{{cartTotalCost}}₴</p>
 </div>
 </div>

@@ -22,7 +22,9 @@ export default {
       'GET_USER_INFO'
   ])},
   mounted() {
+    if(localStorage.jwt){
     this.GET_USER_INFO(localStorage.jwt)
+  }
   }
 
 }

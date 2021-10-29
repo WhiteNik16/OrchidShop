@@ -46,6 +46,10 @@
   }
 
 }
+.v-order-item{
+  display: flex;
+  max-width: 100%;
+}
 .btn_cart_delete{
   font-weight: bold;
   color: #fbf8ff;
@@ -54,3 +58,17 @@
   width: 100px;
   border-radius: 20px;
 }
+.v-order{
+  flex: 1 1 auto;
+  max-width: 80%;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:1% ;
+  min-height: 90vh;
+  &__back {
+
+    background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+
+  }
+  }

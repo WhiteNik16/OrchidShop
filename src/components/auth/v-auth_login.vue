@@ -12,7 +12,7 @@
        <div><a href="/#/register">Нет профиля? Регистрация</a></div>
     </form>
   </div>
-  <button @click="consoleLog">console</button>
+
 </div >
 </template>
 
@@ -38,31 +38,33 @@ export default {
     'GET_USER_INFO'
 
 ]),
-    consoleLog(){
-  console.log(localStorage.jwt)
 
-    },
     submitLoginForm(){
       axios.post('http://localhost:3000/auth/login', this.user)
       .then(res =>{
         console.log(res)
-        if(res.status==202){
+        if(res.status==202) {
           let jwt = res.data
 
-          localStorage.jwt=jwt;
+          localStorage.jwt = jwt;
 
           console.log(this.jwt)
 
 
-
           swal.fire({
 
-              position: 'top',
-              icon: 'success',
-              title: 'success',
-              showConfirmButton: 'false',
-              timer: 1500,
-        })
+            position: 'center',
+            icon: 'success',
+            title: 'success',
+            showConfirmButton: false,
+            timer: 1500,
+          })
+          this.user.username = '',
+              this.user.password = ''
+          setTimeout(function () {
+                window.location.reload()
+              }, `1450`
+          )
         }
         else{
           let msg=res.data
@@ -77,8 +79,7 @@ export default {
         }
 
       })
-         this.user.username='',
-          this.user.password=''
+
     }
   },
 

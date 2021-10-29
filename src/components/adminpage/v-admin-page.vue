@@ -36,8 +36,8 @@
   <div class="admin-page__remove_item">
     <h2>Удалить товар</h2>
     <p>Введите артикль:</p>
-  <div><input type="text" v-model="product.article"></div>
-    <div ><button class="btn_delete" @click="deleteItemFromCatalog(product)">Удалить</button></div>
+  <div><input type="number" v-model="articledelete"></div>
+    <div ><button class="btn_delete" @click="delete_item(articledelete)">Удалить</button></div>
   </div>
 </div>
 </template>
@@ -50,6 +50,7 @@ import swal from 'sweetalert2'
 export default {
   data(){
     return {
+      articledelete:'',
        product: {
         name: '',
         price: '',
@@ -75,6 +76,33 @@ export default {
         'SUBMIT_FORM',
         'DELETE_ITEM_FROM_CATALOG'
     ]),
+   delete_item(){ let formdelete =  new FormData()
+   formdelete.append('article', this.articledelete)
+      axios.post('http://localhost:3000/api/delete', formdelete)
+      .then(response =>{
+        if(response.status == 200){
+          swal.fire({
+
+            position: 'top',
+            icon: 'success',
+            title: 'Файл успешно  удален',
+            showConfirmButton: 'false',
+            timer: 1500,
+          })
+        }
+        else {
+          swal.fire({
+
+            position: 'top',
+            icon: 'error',
+            title: 'error',
+            showConfirmButton: 'false',
+            timer: 1500,
+          })
+        }
+
+      })
+   },
    handleUploadFile(){
      this.file = this.$refs.files.files[0];
    },
@@ -87,7 +115,7 @@ export default {
        formdata.append('description',this.product.description)
 
        formdata.append('file', this.file)
-        console.log(formdata.getAll('product','file'))
+
      axios.post('http://localhost:3000/api/addorchid',formdata)
          .then(response => {
            if(response.data == "Файл загружен"){
@@ -116,13 +144,6 @@ export default {
            console.log(error.response)
          })
    },
-
-
-
-   deleteItemFromCatalog(newproduct){
-    this.DELETE_ITEM_FROM_CATALOG(newproduct)
-
-   }
 
 
  },
